@@ -13,6 +13,9 @@
 		25CBB2EF25F71D7D00E1E8A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CBB2ED25F71D7D00E1E8A1 /* Main.storyboard */; };
 		25CBB2F125F71D8300E1E8A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25CBB2F025F71D8300E1E8A1 /* Assets.xcassets */; };
 		25CBB2F425F71D8300E1E8A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25CBB2F225F71D8300E1E8A1 /* LaunchScreen.storyboard */; };
+		25CBB2FD25F73D0800E1E8A1 /* Basic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBB2FC25F73D0800E1E8A1 /* Basic.swift */; };
+		25CBB30025F7420200E1E8A1 /* Computer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBB2FF25F7420200E1E8A1 /* Computer.swift */; };
+		25CBB30325F744DD00E1E8A1 /* AI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25CBB30225F744DD00E1E8A1 /* AI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		25CBB2F025F71D8300E1E8A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		25CBB2F325F71D8300E1E8A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25CBB2F525F71D8300E1E8A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25CBB2FC25F73D0800E1E8A1 /* Basic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basic.swift; sourceTree = "<group>"; };
+		25CBB2FF25F7420200E1E8A1 /* Computer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Computer.swift; sourceTree = "<group>"; };
+		25CBB30225F744DD00E1E8A1 /* AI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,9 @@
 				25CBB2F025F71D8300E1E8A1 /* Assets.xcassets */,
 				25CBB2F225F71D8300E1E8A1 /* LaunchScreen.storyboard */,
 				25CBB2F525F71D8300E1E8A1 /* Info.plist */,
+				25CBB2FC25F73D0800E1E8A1 /* Basic.swift */,
+				25CBB2FF25F7420200E1E8A1 /* Computer.swift */,
+				25CBB30225F744DD00E1E8A1 /* AI.swift */,
 			);
 			path = GuessingNumberGame;
 			sourceTree = "<group>";
@@ -137,9 +146,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25CBB2FD25F73D0800E1E8A1 /* Basic.swift in Sources */,
 				25CBB2EC25F71D7D00E1E8A1 /* ViewController.swift in Sources */,
+				25CBB30025F7420200E1E8A1 /* Computer.swift in Sources */,
 				25CBB2E825F71D7D00E1E8A1 /* AppDelegate.swift in Sources */,
 				25CBB2EA25F71D7D00E1E8A1 /* SceneDelegate.swift in Sources */,
+				25CBB30325F744DD00E1E8A1 /* AI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,24 +1,152 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IM2-Ef-M6p">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Number Guessing-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GuessingNumberGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Player Guess" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GPM-A8-MVd">
+                                <rect key="frame" x="10" y="108" width="120" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="fMT-pa-CUU"/>
+                                    <constraint firstAttribute="height" constant="34" id="yYM-W9-XXU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RqV-Mm-3CA">
+                                <rect key="frame" x="140" y="108" width="43" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uOr-MR-Qkx"/>
+                                </constraints>
+                                <state key="normal" title="Guess"/>
+                                <connections>
+                                    <action selector="guess:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kvm-pw-ykf"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="tK6-rg-N5V">
+                                <rect key="frame" x="20" y="152" width="374" height="400"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Hello" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2X-yL-NdC">
+                                        <rect key="frame" x="0.0" y="0.0" width="182" height="400"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="World" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb0-lo-FzT">
+                                        <rect key="frame" x="192" y="0.0" width="182" height="400"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="?B" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cyu-VN-ZiX">
+                                <rect key="frame" x="266" y="108" width="42" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="IBv-0y-8Iz"/>
+                                    <constraint firstAttribute="width" constant="42" id="Xem-20-VvB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d4h-Ax-rnl">
+                                <rect key="frame" x="318" y="108" width="39" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="MqX-HJ-XBW"/>
+                                    <constraint firstAttribute="width" constant="39" id="vS7-bs-lsj"/>
+                                </constraints>
+                                <state key="normal" title="Reply"/>
+                                <connections>
+                                    <action selector="reply:" destination="BYZ-38-t0r" eventType="touchUpInside" id="28f-yX-yW2"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="?A" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xLY-t7-Tue">
+                                <rect key="frame" x="212" y="108" width="44" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="I8A-CG-UMg"/>
+                                    <constraint firstAttribute="height" constant="34" id="zaL-r9-V5S"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cyu-VN-ZiX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="A7j-ei-I9K"/>
+                            <constraint firstItem="d4h-Ax-rnl" firstAttribute="leading" secondItem="Cyu-VN-ZiX" secondAttribute="trailing" constant="10" id="AaZ-pD-Foy"/>
+                            <constraint firstItem="tK6-rg-N5V" firstAttribute="top" secondItem="Cyu-VN-ZiX" secondAttribute="bottom" constant="10" id="IdT-gK-5lf"/>
+                            <constraint firstItem="RqV-Mm-3CA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Ikd-Vl-Lyk"/>
+                            <constraint firstItem="GPM-A8-MVd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="QXd-fN-QKa"/>
+                            <constraint firstItem="d4h-Ax-rnl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Wwb-Mf-6fL"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tK6-rg-N5V" secondAttribute="trailing" constant="20" id="cgR-5y-H6Z"/>
+                            <constraint firstItem="GPM-A8-MVd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="deQ-F5-onk"/>
+                            <constraint firstItem="xLY-t7-Tue" firstAttribute="leading" secondItem="qb0-lo-FzT" secondAttribute="leading" id="e4Z-jL-Cf6"/>
+                            <constraint firstItem="tK6-rg-N5V" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fgx-TN-tb0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tK6-rg-N5V" secondAttribute="bottom" constant="310" id="jZI-Wu-AQz"/>
+                            <constraint firstItem="Cyu-VN-ZiX" firstAttribute="leading" secondItem="xLY-t7-Tue" secondAttribute="trailing" constant="10" id="qj5-M3-Jes"/>
+                            <constraint firstItem="xLY-t7-Tue" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="uyJ-9i-a8L"/>
+                            <constraint firstItem="RqV-Mm-3CA" firstAttribute="leading" secondItem="GPM-A8-MVd" secondAttribute="trailing" constant="10" id="wDL-J5-wZT"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Number Guessing" id="zNc-ws-umP">
+                        <barButtonItem key="rightBarButtonItem" title="Reset" id="xxd-db-5do">
+                            <connections>
+                                <action selector="reset:" destination="BYZ-38-t0r" id="FdS-x9-Hng"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="computerLog" destination="qb0-lo-FzT" id="FH7-VO-oh9"/>
+                        <outlet property="guessTextField" destination="GPM-A8-MVd" id="cqE-HV-8lh"/>
+                        <outlet property="inputA" destination="xLY-t7-Tue" id="JdG-fv-crT"/>
+                        <outlet property="inputB" destination="Cyu-VN-ZiX" id="Gkf-FU-ZEv"/>
+                        <outlet property="playerLog" destination="h2X-yL-NdC" id="SVF-gY-dSC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="123.88392857142857"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dp2-Ny-y3J">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IM2-Ef-M6p" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dhF-jU-8VZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="zfC-Bc-FPP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3hg-LX-7MD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="123.88392857142857"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
